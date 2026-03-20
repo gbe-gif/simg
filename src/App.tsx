@@ -238,7 +238,6 @@ function CharacterPage({ data, onNavigate }: { data: CharacterData, onNavigate: 
       
       <header className="mb-16 text-center">
         <h1 className="text-5xl md:text-6xl font-serif text-title-gold mb-6 tracking-widest">{data.name}</h1>
-        <p className="text-title-pink text-xl font-serif tracking-wider">소속: {data.familyBgName}</p>
       </header>
 
       <div className="flex flex-col gap-24">
