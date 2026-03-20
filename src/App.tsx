@@ -97,11 +97,11 @@ export default function App() {
   );
 }
 
-function NavigationButton({ onClick }: { onClick: () => void }) {
+function NavigationButton({ onClick, className = "" }: { onClick: () => void, className?: string }) {
   return (
     <button 
       onClick={onClick}
-      className="mb-8 flex items-center gap-2 text-accent-pink hover:text-title-pink transition-colors duration-300 group cursor-pointer"
+      className={`flex items-center gap-2 text-accent-pink hover:text-title-pink transition-colors duration-300 group cursor-pointer ${className}`}
     >
       <ArrowLeft className="w-5 h-5 transition-transform group-hover:-translate-x-1" />
       <span className="font-serif text-lg">홈으로 가기</span>
@@ -196,8 +196,6 @@ function BackgroundsPage({ onNavigate }: { onNavigate: (page: Page) => void }) {
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.5 }}
     >
-      <NavigationButton onClick={() => onNavigate('home')} />
-      
       <header className="mb-16 text-center">
         <h1 className="text-4xl md:text-5xl font-serif text-title-gold mb-6 tracking-widest">배경 이미지 모음</h1>
         <p className="text-text-soft/80 text-lg">이야기가 펼쳐지는 주요 무대들</p>
@@ -222,6 +220,10 @@ function BackgroundsPage({ onNavigate }: { onNavigate: (page: Page) => void }) {
           </section>
         ))}
       </div>
+
+      <div className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-50">
+        <NavigationButton onClick={() => onNavigate('home')} className="bg-black/80 backdrop-blur-md px-5 py-3 md:px-6 md:py-3 rounded-full border border-white/20 shadow-[0_0_15px_rgba(0,0,0,0.5)] hover:bg-black hover:scale-105 transition-all" />
+      </div>
     </motion.div>
   );
 }
@@ -234,8 +236,6 @@ function CharacterPage({ data, onNavigate }: { data: CharacterData, onNavigate: 
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.5 }}
     >
-      <NavigationButton onClick={() => onNavigate('home')} />
-      
       <header className="mb-16 text-center">
         <h1 className="text-5xl md:text-6xl font-serif text-title-gold mb-6 tracking-widest">{data.name}</h1>
       </header>
@@ -267,6 +267,10 @@ function CharacterPage({ data, onNavigate }: { data: CharacterData, onNavigate: 
             </div>
           ))}
         </section>
+      </div>
+
+      <div className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-50">
+        <NavigationButton onClick={() => onNavigate('home')} className="bg-black/80 backdrop-blur-md px-5 py-3 md:px-6 md:py-3 rounded-full border border-white/20 shadow-[0_0_15px_rgba(0,0,0,0.5)] hover:bg-black hover:scale-105 transition-all" />
       </div>
     </motion.div>
   );
