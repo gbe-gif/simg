@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Noto Serif KR", serif;
+  --font-sans: "Noto Sans KR", sans-serif;
+  --color-night-dark: #0D0B14;
+  --color-night-purple: #2B1B3D;
+  --color-night-pink: #5C3A4B;
+  --color-accent-pink: #E5989B;
+  --color-text-soft: #EAEAEA;
+  --color-title-pink: #F8E1E7;
+  --color-title-gold: #E5C185;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, var(--color-night-dark) 0%, var(--color-night-purple) 50%, var(--color-night-pink) 100%);
+  background-attachment: fixed;
+  color: var(--color-text-soft);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif {
+  font-family: var(--font-serif);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
