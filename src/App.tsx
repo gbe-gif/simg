@@ -18,7 +18,7 @@ type CharacterData = {
 
 const characters: Record<string, CharacterData> = {
   ryun: {
-    name: "륜 (Ryun)",
+    name: "황보 륜 (皇甫 倫)",
     familyBgName: "비휴가 정원",
     familyBgUrl: "https://raw.githubusercontent.com/gbe-gif/s/refs/heads/main/BG_11.webp",
     images: [
@@ -32,7 +32,7 @@ const characters: Record<string, CharacterData> = {
     ]
   },
   muya: {
-    name: "무야 (Muya)",
+    name: "백 무야 (白 無夜)",
     familyBgName: "은호가 연못",
     familyBgUrl: "https://raw.githubusercontent.com/gbe-gif/s/refs/heads/main/BG_12.webp",
     images: [
@@ -46,7 +46,7 @@ const characters: Record<string, CharacterData> = {
     ]
   },
   ran: {
-    name: "란 (Ran)",
+    name: "당 란 (唐 爛)",
     familyBgName: "청룡가 서재",
     familyBgUrl: "https://raw.githubusercontent.com/gbe-gif/s/refs/heads/main/BG_13.webp",
     images: [
@@ -60,7 +60,7 @@ const characters: Record<string, CharacterData> = {
     ]
   },
   soha: {
-    name: "소하 (Soha)",
+    name: "연 소하 (燕 素河)",
     familyBgName: "주작가 연무장",
     familyBgUrl: "https://raw.githubusercontent.com/gbe-gif/s/refs/heads/main/BG_14.webp",
     images: [
